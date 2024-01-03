@@ -166,13 +166,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddToggle({
-	Name = "setpoin teleport",
-	Default = false,
-	Callback = function(Value)loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
-		print(Value)
-	end    
-})
 
 Tab:AddToggle({
 	Name = "infinity yield",
@@ -181,6 +174,14 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
+
+Tab:AddButton({
+	Name = "set point teleport!",
+	Callback = function()loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+      		print("button pressed")
+  	end    
+})
+
 
 
 
