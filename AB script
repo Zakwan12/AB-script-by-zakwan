@@ -1,0 +1,186 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Alternate battleground by H.R.U", HidePremium = false, IntroText = "Alternate Battleground",SaveConfig = true, ConfigFolder = "TutorialConfig"})
+
+OrionLib:MakeNotification({
+	Name = "WELCOME",
+	Content = "WELCOME TO Alternate battleground Script",
+	Image = "rbxassetid://10100630346",
+	Time = 10
+}) 
+
+--tabs
+local Tab = Window:MakeTab({
+	Name = "Sans",
+	Icon = "rbxassetid://8419306829",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "sumon bone weapon",
+	Callback = function()local args = {
+    [1] = "Bone",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "invisible block",
+	Callback = function()local args = {
+    [1] = "Blocking",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GenericEvents"):WaitForChild("Ban"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end
+  	
+})
+
+Tab:AddButton({
+	Name = "block spawn",
+	Callback = function()local args = {
+    [1] = "Block",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+
+--tabs 2
+local Tab = Window:MakeTab({
+	Name = "gaster",
+	Icon = "rbxassetid://8419306829",
+	PremiumOnly = false
+})
+
+
+
+Tab:AddButton({
+	Name = "block spawn gaster",
+	Callback = function()local args = {
+    [1] = "Block",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddToggle({
+	Name = "spawn block toggle!",
+	Default = false,
+	Callback = function(Value)local args = {
+    [1] = "Block",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTGaster"):WaitForChild("Spawn"):FireServer(unpack(args))
+		print(Value)
+	end    
+})
+
+
+
+--tabs 3
+local Tab = Window:MakeTab({
+	Name = "X!frisk",
+	Icon = "rbxassetid://8419306829",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "summon overwrite",
+	Callback = function()local args = {
+    [1] = "Overwrite",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("XFrisk"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+--tabs 4
+local Tab = Window:MakeTab({
+	Name = "cross player",
+	Icon = "rbxassetid://8419306829",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "spawn weapon",
+	Callback = function()local args = {
+    [1] = "BoneMelee",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Cross"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "fake next (phase1)",
+	Callback = function()local args = {
+    [1] = "Knife",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Cross"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "overwrite",
+	Callback = function()local args = {
+    [1] = "Overwrite",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Cross"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+--tabs 5
+local Tab = Window:MakeTab({
+	Name = "misc",
+	Icon = "rbxassetid://10099841910",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "setpoin teleport",
+	Default = false,
+	Callback = function(Value)loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+		print(Value)
+	end    
+})
+
+Tab:AddToggle({
+	Name = "infinity yield",
+	Default = false,
+	Callback = function(Value)loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		print(Value)
+	end    
+})
+
+
+
