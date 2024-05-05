@@ -28,6 +28,30 @@ game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):
 })
 
 Tab:AddButton({
+	Name = "loop summon bone! (can't stop)",
+	Callback = function()getgenv().farmer = true;
+
+while wait(0.10) do
+   if getgenv().farmer == true then
+    local args = {
+    [1] = "Bone",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
 	Name = "invisible block",
 	Callback = function()local args = {
     [1] = "Blocking",
@@ -54,7 +78,29 @@ game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):
   	end    
 })
 
+Tab:AddButton({
+	Name = "glitch Particle (don't use skin nubla sans)!", 
+	Callback = function()getgenv().farmer = true;
 
+while wait(0.20) do
+   if getgenv().farmer == true then
+    local args = {
+    [1] = "Block",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sans"):WaitForChild("Spawn"):FireServer(unpack(args))
+
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 --tabs 2
 local Tab = Window:MakeTab({
 	Name = "gaster",
@@ -166,6 +212,13 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddToggle({
+	Name = "setpoin teleport",
+	Default = false,
+	Callback = function(Value)loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+		print(Value)
+	end    
+})
 
 Tab:AddToggle({
 	Name = "infinity yield",
@@ -174,14 +227,6 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
-
-Tab:AddButton({
-	Name = "set point teleport!",
-	Callback = function()loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
-      		print("button pressed")
-  	end    
-})
-
 
 
 
