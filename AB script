@@ -10,6 +10,62 @@ OrionLib:MakeNotification({
 
 --tabs
 local Tab = Window:MakeTab({
+	Name = "Sans nmm only",
+	Icon = "rbxassetid://8419306829",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "summon block",
+	Default = false,
+	Callback = function(Value)local args = {
+    [1] = "Block",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Sans.Spawn:FireServer(unpack(args))
+
+		print(Value)
+	end    
+})
+
+Tab:AddButton({
+	Name = "laser eye!", 
+	Callback = function()getgenv().farmer = true;
+
+while wait(0.5) do
+   if getgenv().farmer == true then
+    local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage").Melee.S:FireServer(unpack(args))
+
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "gloves nmm)!", 
+	Callback = function()getgenv().farmer = true;
+
+while wait(2) do
+   if getgenv().farmer == true then
+    local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage").Melee.S:FireServer(unpack(args))
+
+    end
+end
+      		print("button pressed")
+  	end    
+})
+
+local Tab = Window:MakeTab({
 	Name = "Sans",
 	Icon = "rbxassetid://8419306829",
 	PremiumOnly = false
